@@ -31,7 +31,8 @@ export default function Header({
   selectedCategory, 
   onSelectCategory,
   isMuted,
-  onToggleMute
+  onToggleMute,
+  onOpenCatalog
 }) {
   const [showQR, setShowQR] = useState(false);
   const localUrl = "http://192.168.51.19:3000";
@@ -56,6 +57,16 @@ export default function Header({
           </div>
 
           <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Nút xem toàn bộ kho 158 thẻ bài */}
+            <button
+              onClick={onOpenCatalog}
+              className="px-2.5 py-1.5 rounded-full bg-party-card border border-party-neonPink/40 hover:border-party-neonPink text-party-neonPink text-xs font-semibold flex items-center gap-1 shadow-sm transition active:scale-95"
+              title="Xem và tra cứu toàn bộ 158 thẻ bài"
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>Kho Thẻ</span>
+            </button>
+
             {/* Nút bật / tắt âm thanh */}
             <button
               onClick={onToggleMute}

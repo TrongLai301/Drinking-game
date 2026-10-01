@@ -1,7 +1,16 @@
 import React from 'react';
-import { Sparkles, RotateCcw, History } from 'lucide-react';
+import { Sparkles, RotateCcw, History, Layers } from 'lucide-react';
 
-export default function Controls({ onDraw, onReshuffle, onOpenHistory, isDeckEmpty, isDrawing, drawnCount, totalCount }) {
+export default function Controls({ 
+  onDraw, 
+  onReshuffle, 
+  onOpenHistory, 
+  onOpenCatalog,
+  isDeckEmpty, 
+  isDrawing, 
+  drawnCount, 
+  totalCount 
+}) {
   return (
     <div className="w-full max-w-[340px] flex flex-col items-center gap-3">
       {/* Hàng nút bấm */}
@@ -57,6 +66,15 @@ export default function Controls({ onDraw, onReshuffle, onOpenHistory, isDeckEmp
           <span>TIẾN ĐỘ: {Math.round((drawnCount / (totalCount || 1)) * 100)}%</span>
         </div>
       </div>
+
+      {/* Nút xem nhanh toàn bộ kho thẻ */}
+      <button
+        onClick={onOpenCatalog}
+        className="text-[11px] text-gray-400 hover:text-party-neonCyan transition flex items-center justify-center gap-1.5 pt-0.5 active:scale-95"
+      >
+        <Layers className="w-3.5 h-3.5 text-party-neonPink" />
+        <span>Xem toàn bộ 158 thẻ bài & tìm kiếm</span>
+      </button>
     </div>
   );
 }

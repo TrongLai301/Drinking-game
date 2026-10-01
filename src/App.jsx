@@ -4,10 +4,12 @@ import DeckStack from './components/DeckStack';
 import SwipeCard from './components/SwipeCard';
 import Controls from './components/Controls';
 import HistoryModal from './components/HistoryModal';
+import CardsCatalog from './components/CardsCatalog';
 import { useDrinkingGame } from './hooks/useDrinkingGame';
 import { useAudioFeedback } from './hooks/useAudioFeedback';
 
 export default function App() {
+  const [currentView, setCurrentView] = useState('game'); // 'game' | 'catalog'
   const {
     remainingCount,
     totalCardsCount,
@@ -77,6 +79,20 @@ export default function App() {
     }
   }, [currentCard, playSound, triggerConfetti, triggerVibrate]);
 
+  if (currentView === 'catalog') {
+    return (
+      <div className="min-h-screen bg-party-dark flex flex-col items-center p-3 sm:p-6 relative overflow-x-hidden">
+        {/* Background Neon Glow Orbs */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-party-neonPurple/20 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-party-neonPink/20 rounded-full blur-[110px] pointer-events-none" />
+
+        <CardsCatalog 
+          onBackToGame={() => setCurrentView('game')} 
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-party-dark flex flex-col items-center justify-between p-4 sm:p-6 relative overflow-x-hidden">
       {/* Background Neon Glow Orbs */}
@@ -91,6 +107,7 @@ export default function App() {
         onSelectCategory={changeCategory}
         isMuted={isMuted}
         onToggleMute={toggleMute}
+        onOpenCatalog={() => setCurrentView('catalog')}
       />
 
       {/* Khu vực thẻ bài trung tâm với DeckStack và SwipeCard (kéo/chạm để ra thẻ mới) */}
@@ -112,6 +129,7 @@ export default function App() {
           onDraw={handleNextCard}
           onReshuffle={handleReshuffle}
           onOpenHistory={() => setIsHistoryOpen(true)}
+          onOpenCatalog={() => setCurrentView('catalog')}
           isDeckEmpty={isDeckEmpty}
           isDrawing={isDrawing}
           drawnCount={drawnCount}
