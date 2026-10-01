@@ -1,17 +1,17 @@
 // =========================================================================
-// MOCKUP DATA TOÀN DIỆN CHO DRINKING GAME BẠN BÈ:
-// 1. Thổ Lộ & Tình Cảm 💌 (Chân thành, rung động, cảm xúc sâu lắng, không quá 18+)
-// 2. Do or Drink 🥃 (Làm hay Uống - Thách thức hành động trực diện)
-// 3. Kim Bài Quyền Lực 👑 (Bùa hộ mệnh, phản đòn, hoán đổi, bảo vệ)
-// 4. Truth or Dare 🤫 (Thật hay Thách - Lột trần bí mật tình cảm)
-// 5. Phê Far 🍻 (Sát phạt nâng ly, cạn đáy bàn nhậu)
-// 6. U Là Trời ⚡ (Tình huống dở khóc dở cười, mini game Gen Z)
-// TỔNG CỘNG: 110 LÁ BÀI PHONG PHÚ
+// MOCKUP DATA ĐƯỢC ĐIỀU CHỈNH THEO YÊU CẦU:
+// - Thổ Lộ & Tình Cảm 💌 (TĂNG LÊN 28 LÁ - Chân thành, rung động, không quá 18+)
+// - Do or Drink 🥃 (TĂNG LÊN 28 LÁ - Thách thức hành động trực diện)
+// - U Là Trời ⚡ (GIẢM XUỐNG CÒN 10 LÁ TINH TÚY NHẤT)
+// - Kim Bài Quyền Lực 👑 (12 lá)
+// - Truth or Dare 🤫 (22 lá)
+// - Phê Far 🍻 (20 lá)
+// TỔNG CỘNG: 120 LÁ BÀI
 // =========================================================================
 
 export const DRINKING_CARDS = [
   // =========================================================================
-  // 💌 PHẦN 1: THỔ LỘ & TÌNH CẢM (18 LÁ - CHÂN THÀNH, RUNG ĐỘNG, KHÔNG QUÁ 18+)
+  // 💌 PHẦN 1: THỔ LỘ & TÌNH CẢM (28 LÁ - CHÂN THÀNH, CẢM XÚC, KHÔNG QUÁ 18+)
   // =========================================================================
   {
     id: "tl_01",
@@ -247,9 +247,139 @@ export const DRINKING_CARDS = [
     penalty: "Không giải thích: Uống 1 ly",
     drinkCount: 1
   },
+  {
+    id: "tl_19",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Bờ Vai Bình Yên",
+    description: "Khi gặp chuyện áp lực hoặc buồn phiền nhất trong cuộc sống, ai là người đầu tiên bạn muốn bấm số gọi điện để tâm sự?",
+    penalty: "Không trả lời: Uống 2 ngụm",
+    drinkCount: 2
+  },
+  {
+    id: "tl_20",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Hẹn Hò Trong Mơ",
+    description: "Mô tả một buổi hẹn hò lý tưởng nhất trong mơ của bạn: Không gian ở đâu, làm những việc gì và cảm xúc sẽ như thế nào?",
+    penalty: "Từ chối: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "tl_21",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "Flame",
+    title: "Tâm Tư Chưa Dám Nói",
+    description: "Có điều gì bạn luôn muốn nói hoặc khuyên nhủ người đang ngồi bên tay trái nhưng chưa từng có dịp? Hãy nói chân thành ngay lúc này.",
+    penalty: "Ngại không nói: Tự giác uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "tl_22",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "Flame",
+    title: "Cái Ôm Chữa Lành",
+    description: "Trao một cái ôm ấm áp kéo dài 5 giây cho người bạn cảm thấy đang cần sự an ủi hoặc đang có nhiều tâm sự nhất trong bàn.",
+    penalty: "Từ chối: Uống 1 ly đầy",
+    drinkCount: 1
+  },
+  {
+    id: "tl_23",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Mùi Hương Kỷ Niệm",
+    description: "Bạn có ghi nhớ mùi hương nước hoa hoặc mùi hương đặc trưng của một người từng rất quan trọng trong quá khứ của bạn không?",
+    penalty: "Không chia sẻ: Uống 1 ngụm",
+    drinkCount: 1
+  },
+  {
+    id: "tl_24",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "Flame",
+    title: "Khoảnh Khắc Đẹp Nhất",
+    description: "Chỉ cho người ngồi đối diện xem 1 bức ảnh của họ (trên Facebook/Instagram) mà bạn thấy họ tỏa sáng và đẹp nhất từ trước đến nay.",
+    penalty: "Không tìm: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "tl_25",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Chấp Niệm Quá Khứ",
+    description: "Bạn đã thực sự hoàn toàn buông bỏ được hình bóng người cũ chưa, hay thi thoảng vẫn vô thức vào xem trang cá nhân của họ?",
+    penalty: "Nói dối hoặc giấu: Uống 2 ly!",
+    drinkCount: 2
+  },
+  {
+    id: "tl_26",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Hành Động Nhỏ Ý Nghĩa Lớn",
+    description: "Một hành động quan tâm rất nhỏ của ai đó (như gạt chỗ để chân xe, nhắn tin hỏi về đến nhà chưa) nhưng làm bạn nhớ mãi là gì?",
+    penalty: "Từ chối: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "tl_27",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Lời Hứa Năm Tháng",
+    description: "Có một lời hứa nào của ai đó từng hứa với bạn mà đến tận bây giờ bạn vẫn ghi nhớ trong lòng chưa từng quên không?",
+    penalty: "Không chia sẻ: Uống 2 ngụm",
+    drinkCount: 2
+  },
+  {
+    id: "tl_28",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "Flame",
+    title: "Chiếc Cốc Yêu Thương",
+    description: "Rót một ly đồ uống đầy tình cảm và tự tay trao tận tay cho người bạn muốn gửi gắm nhiều sự thương mến nhất bàn hôm nay.",
+    penalty: "Từ chối: Tự uống 2 ly",
+    drinkCount: 2
+  },
 
   // =========================================================================
-  // 🥃 PHẦN 2: DO OR DRINK (18 LÁ - LÀM THỬ THÁCH HOẶC UỐNG PHẠT)
+  // 🥃 PHẦN 2: DO OR DRINK (28 LÁ - THÁCH THỨC HÀNH ĐỘNG HOẶC UỐNG PHẠT)
   // =========================================================================
   {
     id: "dod_01",
@@ -429,7 +559,7 @@ export const DRINKING_CARDS = [
     badgeColor: "from-orange-500 to-amber-600",
     iconName: "Flame",
     title: "Tiếng Kêu Động Vật",
-    description: "DO: Giả tiếng kêu của 3 loài động vật khác nhau (mèo, gà trống, sói hú) thật to rõ. HOẶC DRINK: Uống 1 ly!",
+    description: "DO: Giả tiếng kêu của chó thật to rõ trong 5s. HOẶC DRINK: Uống 1 ly!",
     penalty: "Không dám làm: Uống 1 ly",
     drinkCount: 1
   },
@@ -484,6 +614,136 @@ export const DRINKING_CARDS = [
     description: "DO: Nhắm mắt lại và đoán đúng màu mắt / hình dáng lông mày của người bên phải. HOẶC DRINK: Uống 1 ly!",
     penalty: "Đoán sai: Uống 1 ly",
     drinkCount: 1
+  },
+  {
+    id: "dod_19",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Order Món Lạ Lùng",
+    description: "DO: Gọi phục vụ (hoặc gọi điện cho quán ăn) hỏi xem quán có món 'Trà sữa trân châu vị nước mắm' không. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Không dám hỏi: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_20",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Selfie Bàn Bên Cạnh",
+    description: "DO: Sang bàn bên cạnh hoặc nhờ người phục vụ chụp chung 1 tấm ảnh selfie giơ tay chữ V thật tươi. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Ngại không chụp: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_21",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Thì Thầm Hài Hước",
+    description: "DO: Ghé sát tai người ngồi bên trái thì thầm một câu nói đùa khiến người đó phải bật cười thành tiếng. HOẶC DRINK: Uống 1 ly!",
+    penalty: "Người bên cạnh không cười: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "dod_22",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "MC Đám Cưới Bất Đắc Dĩ",
+    description: "DO: Cầm chai bia làm micro và phát biểu chúc mừng đám cưới giả định cho 2 người bất kỳ trong bàn trong 30 giây. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Từ chối làm MC: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_23",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Xin Lỗi Chiếc Ly",
+    description: "DO: Khoanh tay cúi đầu nói lời xin lỗi chân thành với chiếc ly đồ uống vì tối nay đã bắt nó làm việc quá sức. HOẶC DRINK: Cạn 1 ly đầy!",
+    penalty: "Không xin lỗi: Cạn 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "dod_24",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Bịt Mắt Nhận Người Thân",
+    description: "DO: Nhắm chặt mắt, chỉ dùng tay chạm nhẹ vào mu bàn tay 3 người bất kỳ và đoán trúng tên từng người. HOẶC DRINK: Uống 2 ngụm!",
+    penalty: "Đoán sai bất kỳ ai: Uống 2 ngụm",
+    drinkCount: 2
+  },
+  {
+    id: "dod_25",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Thử Thách Plank 30 Giây",
+    description: "DO: Nằm xuống thực hiện động tác Plank chuẩn trong đúng 30 giây trước sự đếm giờ của cả bàn. HOẶC DRINK: Cứ thiếu 10 giây uống 1 ngụm!",
+    penalty: "Không đủ thời gian quy đổi ra uống",
+    drinkCount: 2
+  },
+  {
+    id: "dod_26",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Kể Chuyện Cười 1 Phút",
+    description: "DO: Kể 1 mẩu chuyện cười hoặc làm điệu bộ hài hước khiến ít nhất 2 người trong bàn bật cười. HOẶC DRINK: Nếu không ai cười, tự phạt 2 ly!",
+    penalty: "Không ai cười: Tự phạt 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_27",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Tự Khen Mình 5 Câu",
+    description: "DO: Nhìn vào màn hình camera điện thoại và tự khen nhan sắc/tài năng của mình bằng 5 tính từ mỹ miều nhất. HOẶC DRINK: Uống 1 ly!",
+    penalty: "Không khen nổi: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "dod_28",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Múa Quạt Dẻo Dai",
+    description: "DO: Đứng lên múa điệu 'múa quạt' phong cách idol TikTok cực dẻo trong 15 giây. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Từ chối múa: Uống 2 ly",
+    drinkCount: 2
   },
 
   // =========================================================================
@@ -1201,7 +1461,7 @@ export const DRINKING_CARDS = [
   },
 
   // =========================================================================
-  // ⚡ PHẦN 6: BỘ "U LÀ TRỜI" (20 LÁ MINI-GAME, TÌNH HUỐNG LẦY LỘI GEN Z)
+  // ⚡ PHẦN 6: BỘ "U LÀ TRỜI" (10 LÁ TINH TÚY NHẤT - HÀI HƯỚC, GEN Z)
   // =========================================================================
   {
     id: "ult_01",
@@ -1314,32 +1574,6 @@ export const DRINKING_CARDS = [
     category: "u-la-troi",
     categoryName: "U Là Trời ⚡",
     badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Users",
-    title: "Đoán Giá Chiếc Áo",
-    description: "Người bốc chọn 1 chiếc áo của người khác và đoán giá mua. Cả bàn cùng đoán, ai đoán lệch giá thật xa nhất phải uống 1 ly!",
-    penalty: "Người đoán xa nhất uống",
-    drinkCount: 1
-  },
-  {
-    id: "ult_10",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Users",
-    title: "Trả Lời Nhanh 5 Giây",
-    description: "Người bên phải hỏi người bốc bài: 'Kể tên 3 con vật biết bơi trong 5 giây!'. Nếu không nói kịp 3 con trong 5 giây thì phạt uống.",
-    penalty: "Không kịp 5 giây: Uống 2 ngụm",
-    drinkCount: 2
-  },
-  {
-    id: "ult_11",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
     iconName: "ShieldAlert",
     title: "Cấm Nói Từ 'Ủa'",
     description: "Từ 'Ủa' bị cấm tuyệt đối trên bàn tiệc. Bất cứ ai vô tình buột miệng nói từ này sẽ phải tự giác uống 1 ngụm!",
@@ -1347,111 +1581,7 @@ export const DRINKING_CARDS = [
     drinkCount: 1
   },
   {
-    id: "ult_12",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Users",
-    title: "Thử Thách Nín Cười",
-    description: "Người bốc làm một hành động hoặc nét mặt hài hước trong 20 giây. Bất kỳ ai trong bàn bật cười đều phải nâng ly uống 1 ngụm!",
-    penalty: "Ai cười người đó uống",
-    drinkCount: 1
-  },
-  {
-    id: "ult_13",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Users",
-    title: "Báo Thức Định Mệnh",
-    description: "Cài báo thức điện thoại 2 phút. Cả bàn tiếp tục trò chuyện, đúng lúc chuông reo ai đang nói dở thì người đó phải uống 1 ly!",
-    penalty: "Người đang nói lúc chuông reo uống",
-    drinkCount: 1
-  },
-  {
-    id: "ult_14",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Users",
-    title: "Đố Nhạc 5 Giây",
-    description: "Người bốc huýt sáo hoặc ngân nga giai điệu 1 bài hát quen thuộc trong 5 giây. Ai đoán đúng đầu tiên được quyền chỉ định 1 người uống!",
-    penalty: "Không ai đoán được: Người bốc tự uống",
-    drinkCount: 1
-  },
-  {
-    id: "ult_15",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Users",
-    title: "Oẳn Tù Tì Nhóm",
-    description: "Đếm '1, 2, 3', tất cả mọi người cùng ra kéo - búa - bao. Nhóm người ra lựa chọn ít nhất (thiểu số) phải uống 1 ngụm!",
-    penalty: "Nhóm thiểu số cùng uống",
-    drinkCount: 1
-  },
-  {
-    id: "ult_16",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Flame",
-    title: "Tự Tin Tỏa Sáng",
-    description: "Người tự nhận mình có gương mặt đẹp trai/xinh gái nhất bàn hôm nay phải tự giác uống 1 ly để chứng minh độ tự tin!",
-    penalty: "Nếu không ai nhận: Cả bàn cùng uống!",
-    drinkCount: 1
-  },
-  {
-    id: "ult_17",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Beer",
-    title: "Anh Hùng Cứu Mỹ Nhân",
-    description: "Người uống khỏe nhất bàn hãy thể hiện tinh thần trượng nghĩa bằng cách nâng ly uống hộ 1 ngụm cho người yếu nhất bàn!",
-    penalty: "Uống hộ bạn hiền",
-    drinkCount: 1
-  },
-  {
-    id: "ult_18",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "ShieldAlert",
-    title: "Nhại Giọng Kẻ Bốc Bài",
-    description: "Trong 1 phút tiếp theo, bất kỳ câu nào người bốc bài nói ra thì người ngồi đối diện phải lặp lại y hệt từng chữ!",
-    penalty: "Quên không lặp lại: Uống 1 ngụm",
-    drinkCount: 1
-  },
-  {
-    id: "ult_19",
-    deck: "u-la-troi",
-    deckName: "U Là Trời",
-    category: "u-la-troi",
-    categoryName: "U Là Trời ⚡",
-    badgeColor: "from-purple-500 to-indigo-600",
-    iconName: "Users",
-    title: "Bầu Chọn Thức Khuya Nhất",
-    description: "Ai trong bàn thường xuyên đi ngủ sau 2 giờ sáng nhất? Người đó phải uống 1 ly vì lối sống thức khuya hại sức khỏe!",
-    penalty: "Thánh thức đêm uống 1 ly",
-    drinkCount: 1
-  },
-  {
-    id: "ult_20",
+    id: "ult_10",
     deck: "u-la-troi",
     deckName: "U Là Trời",
     category: "u-la-troi",
