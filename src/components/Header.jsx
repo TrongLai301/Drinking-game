@@ -16,12 +16,12 @@ import {
 } from 'lucide-react';
 
 const CATEGORIES = [
-  { key: 'all', name: 'Tất Cả (120)', icon: Layers },
-  { key: 'tho-lo', name: 'Thổ Lộ 💌 (28)', icon: Heart },
-  { key: 'do-drink', name: 'Do or Drink 🥃 (28)', icon: Zap },
-  { key: 'lucky', name: 'Kim Bài 👑 (12)', icon: Crown },
-  { key: 'truth-dare', name: 'Truth or Dare 🤫 (22)', icon: HelpCircle },
+  { key: 'all', name: 'Tất Cả (158)', icon: Layers },
+  { key: 'tho-lo', name: 'Thổ Lộ 💌 (40)', icon: Heart },
+  { key: 'do-drink', name: 'Do or Drink 🥃 (40)', icon: Zap },
+  { key: 'truth-dare', name: 'Truth or Dare 🤫 (36)', icon: HelpCircle },
   { key: 'phe-far', name: 'Phê Far 🍻 (20)', icon: Beer },
+  { key: 'lucky', name: 'Kim Bài 👑 (12)', icon: Crown },
   { key: 'u-la-troi', name: 'U Là Trời ⚡ (10)', icon: Sparkles }
 ];
 
@@ -51,7 +51,7 @@ export default function Header({
               <h1 className="text-lg font-black tracking-tight text-white flex items-center gap-1.5">
                 DRUNK DECK <Sparkles className="w-4 h-4 text-party-neonCyan" />
               </h1>
-              <p className="text-[11px] text-gray-400 font-medium">120 Thẻ Bài Drinking Game</p>
+              <p className="text-[11px] text-gray-400 font-medium">158 Thẻ Bài Drinking Game</p>
             </div>
           </div>
 

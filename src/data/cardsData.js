@@ -1,17 +1,18 @@
 // =========================================================================
 // MOCKUP DATA ĐƯỢC ĐIỀU CHỈNH THEO YÊU CẦU:
-// - Thổ Lộ & Tình Cảm 💌 (TĂNG LÊN 28 LÁ - Chân thành, rung động, không quá 18+)
-// - Do or Drink 🥃 (TĂNG LÊN 28 LÁ - Thách thức hành động trực diện)
-// - U Là Trời ⚡ (GIẢM XUỐNG CÒN 10 LÁ TINH TÚY NHẤT)
+// - Tối ưu cho 1 nhóm 13 người ngồi chung (4 nữ, 9 nam - không gian riêng)
+// - Thổ Lộ & Tình Cảm 💌 (TĂNG LÊN 40 LÁ - Chân thành, rung động, không quá 18+)
+// - Do or Drink 🥃 (TĂNG LÊN 40 LÁ - Tương tác nhóm trực diện, bỏ thẻ bàn bên)
+// - Truth or Dare 🤫 (TĂNG LÊN 36 LÁ - Thật hay Thách cực vui cho 4 nữ 9 nam)
 // - Kim Bài Quyền Lực 👑 (12 lá)
-// - Truth or Dare 🤫 (22 lá)
 // - Phê Far 🍻 (20 lá)
-// TỔNG CỘNG: 120 LÁ BÀI
+// - U Là Trời ⚡ (10 lá tinh túy nhất)
+// TỔNG CỘNG: 158 LÁ BÀI
 // =========================================================================
 
 export const DRINKING_CARDS = [
   // =========================================================================
-  // 💌 PHẦN 1: THỔ LỘ & TÌNH CẢM (28 LÁ - CHÂN THÀNH, CẢM XÚC, KHÔNG QUÁ 18+)
+  // 💌 PHẦN 1: THỔ LỘ & TÌNH CẢM (40 LÁ - CHÂN THÀNH, CẢM XÚC, KHÔNG QUÁ 18+)
   // =========================================================================
   {
     id: "tl_01",
@@ -377,9 +378,165 @@ export const DRINKING_CARDS = [
     penalty: "Từ chối: Tự uống 2 ly",
     drinkCount: 2
   },
+  {
+    id: "tl_29",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Ấn Tượng Ban Đầu",
+    description: "Nhìn một người bạn khác giới trong nhóm và chia sẻ thật lòng: Ấn tượng đầu tiên khi mới gặp họ là gì? Bây giờ sau thời gian quen biết đã thay đổi thế nào?",
+    penalty: "Ngại không nói: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "tl_30",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Chuyến Đi Trong Mơ",
+    description: "Nếu được chọn đúng 1 người trong nhóm 13 người hôm nay để cùng đi du lịch trải nghiệm 3 ngày 2 đêm, bạn sẽ rủ ai? Lý do là gì?",
+    penalty: "Từ chối chọn: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "tl_31",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Tấm Khiên Bảo Vệ",
+    description: "Trong số các bạn nam ngồi đây, ai là người tạo cho bạn cảm giác ấm áp, đáng tin cậy và biết quan tâm đến mọi người xung quanh nhất?",
+    penalty: "Không dám nhận xét: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "tl_32",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Nét Cuốn Hút Tự Nhiên",
+    description: "Khen ngợi một nét tính cách đặc biệt hoặc cử chỉ tinh tế của 1 bạn nữ trong nhóm mà bạn thầm trân trọng (sự chu đáo, nụ cười, phong cách...).",
+    penalty: "Ngại ngùng không nói: Uống 2 ngụm",
+    drinkCount: 2
+  },
+  {
+    id: "tl_33",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Rung Động Trước Bạn Thân",
+    description: "Bạn đã bao giờ có một khoảnh khắc nào cảm thấy 'trên tình bạn, dưới tình yêu' với một người bạn khác giới chưa? Cảm xúc lúc đó thế nào?",
+    penalty: "Giữ bí mật: Uống 2 ly!",
+    drinkCount: 2
+  },
+  {
+    id: "tl_34",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Tiêu Chí 'Đổ Gục'",
+    description: "Điểm gì ở người khác giới (ánh mắt, giọng nói ấm áp, sự thông minh, hay cách cư xử ga-lăng) khiến bạn dễ bị rung rinh và siêu lòng nhất?",
+    penalty: "Không trả lời: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "tl_35",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Lời Cảm Ơn Âm Thầm",
+    description: "Có hành động giúp đỡ hay sự quan tâm nào của một người bạn trong nhóm mà bạn vẫn luôn thầm biết ơn nhưng chưa có dịp trực tiếp nói ra không?",
+    penalty: "Từ chối chia sẻ: Uống 2 ngụm",
+    drinkCount: 2
+  },
+  {
+    id: "tl_36",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Mảnh Ghép Tính Cách",
+    description: "Trong 13 người ngồi đây, ai là người có tính cách bù trừ hoặc giống bạn nhất khiến bạn cảm thấy vô cùng thoải mái và tự nhiên khi ở cạnh?",
+    penalty: "Không chọn: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "tl_37",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Hình Mẫu Lý Tưởng",
+    description: "Nếu được chọn các phẩm chất tốt của những người bạn trong bàn để tạo nên người yêu lý tưởng, bạn sẽ lấy nét tính cách nào của ai?",
+    penalty: "Từ chối ghép: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "tl_38",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Tâm Sự Khó Nói",
+    description: "Đã từng có chuyện buồn hoặc áp lực nào trong cuộc sống mà bạn từng muốn tâm sự với nhóm bạn này nhưng lại ngập ngừng giữ lại trong lòng?",
+    penalty: "Giữ trong lòng: Nâng ly uống 1 ngụm giải tỏa",
+    drinkCount: 1
+  },
+  {
+    id: "tl_39",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "HelpCircle",
+    title: "Ánh Mắt Biết Ơn",
+    description: "Cầm ly chạm với người bạn khác giới ngồi xa bạn nhất trong nhóm và chúc người ấy một câu chân thành nhất về tình duyên hoặc sự nghiệp.",
+    penalty: "Từ chối chúc: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "tl_40",
+    deck: "tho-lo",
+    deckName: "Thổ Lộ",
+    category: "tho-lo",
+    categoryName: "Thổ Lộ 💌",
+    badgeColor: "from-pink-500 to-rose-400",
+    iconName: "Flame",
+    title: "Tình Bạn Bền Chặt",
+    description: "Điều gì ở tình bạn của nhóm 13 người chúng ta khiến bạn cảm thấy ấm áp và muốn gắn bó dài lâu nhất sau những buổi tiệc thế này?",
+    penalty: "Không nói nên lời: Cạn 1 ly chúc tình bạn",
+    drinkCount: 1
+  },
 
   // =========================================================================
-  // 🥃 PHẦN 2: DO OR DRINK (28 LÁ - THÁCH THỨC HÀNH ĐỘNG HOẶC UỐNG PHẠT)
+  // 🥃 PHẦN 2: DO OR DRINK (40 LÁ - THÁCH THỨC HÀNH ĐỘNG HOẶC UỐNG PHẠT)
   // =========================================================================
   {
     id: "dod_01",
@@ -623,9 +780,9 @@ export const DRINKING_CARDS = [
     categoryName: "Do or Drink 🥃",
     badgeColor: "from-orange-500 to-amber-600",
     iconName: "Flame",
-    title: "Order Món Lạ Lùng",
-    description: "DO: Gọi phục vụ (hoặc gọi điện cho quán ăn) hỏi xem quán có món 'Trà sữa trân châu vị nước mắm' không. HOẶC DRINK: Uống 2 ly!",
-    penalty: "Không dám hỏi: Uống 2 ly",
+    title: "Pha Chế Thần Thánh",
+    description: "DO: Tự tay pha 1 ly nước 'đặc biệt' từ 2-3 đồ uống có sẵn trên bàn và cụng ly 50% cùng người ngồi đối diện. HOẶC DRINK: Tự phạt 2 ly!",
+    penalty: "Từ chối pha: Uống 2 ly",
     drinkCount: 2
   },
   {
@@ -636,8 +793,8 @@ export const DRINKING_CARDS = [
     categoryName: "Do or Drink 🥃",
     badgeColor: "from-orange-500 to-amber-600",
     iconName: "Flame",
-    title: "Selfie Bàn Bên Cạnh",
-    description: "DO: Sang bàn bên cạnh hoặc nhờ người phục vụ chụp chung 1 tấm ảnh selfie giơ tay chữ V thật tươi. HOẶC DRINK: Uống 2 ly!",
+    title: "Selfie Bất Ổn Cùng Nhóm",
+    description: "DO: Chụp ngay 1 tấm selfie nhóm cùng ít nhất 3 người bạn khác giới với biểu cảm lầy lội / 'dìm hàng' nhất có thể. HOẶC DRINK: Uống 2 ly!",
     penalty: "Ngại không chụp: Uống 2 ly",
     drinkCount: 2
   },
@@ -744,6 +901,162 @@ export const DRINKING_CARDS = [
     description: "DO: Đứng lên múa điệu 'múa quạt' phong cách idol TikTok cực dẻo trong 15 giây. HOẶC DRINK: Uống 2 ly!",
     penalty: "Từ chối múa: Uống 2 ly",
     drinkCount: 2
+  },
+  {
+    id: "dod_29",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Bảo Vệ Mỹ Nhân",
+    description: "DO: Nếu bạn là nam, hãy xung phong nâng ly uống cạn 1 ngụm lớn thay cho 1 bạn nữ bất kỳ trong nhóm! Nếu bạn là nữ, hãy chỉ định 1 bạn nam làm điều này thay bạn. HOẶC DRINK: Cả 2 cùng uống 1 ly!",
+    penalty: "Từ chối ga-lăng: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_30",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Thử Thách Thể Lực Nam Nhi",
+    description: "DO: Hít đất 10 cái (hoặc squat 15 cái) ngay tại chỗ để chứng minh thể lực dẻo dai trước sự chứng kiến của cả nhóm. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Không hoàn thành: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_31",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Hát Nối Tình Ca",
+    description: "DO: Bạn hát 1 câu hát có từ 'Yêu' hoặc 'Nhớ', sau đó chỉ định 1 người khác hát nối câu tiếp theo bắt đầu bằng từ cuối cùng trong 5 giây. Người thua hoặc DRINK: Uống 1 ly!",
+    penalty: "Không hát được: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "dod_32",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Đổi Chỗ Phong Thủy",
+    description: "DO: Đứng dậy và đổi chỗ ngồi với người ngồi đối diện để thay đổi không khí bàn tiệc (khuyến khích ngồi xen kẽ nam nữ để trò chuyện rôm rả). HOẶC DRINK: Uống 2 ly!",
+    penalty: "Không đổi chỗ: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_33",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Khen Ngợi Nhan Sắc",
+    description: "DO: Nhìn thẳng vào mắt một bạn khác giới trong nhóm và khen thật lòng 2 điểm đẹp nhất trên khuôn mặt họ trong 10 giây. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Ngại không khen: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_34",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Oẳn Tù Tì Cứu Tinh",
+    description: "DO: Thách đấu Oẳn Tù Tì với 1 bạn nam bất kỳ. Ai thua phải uống 1 ly đầy để mua vui cho cả nhóm! HOẶC DRINK: Người rút thẻ uống 2 ly!",
+    penalty: "Người thua oẳn tù tì uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "dod_35",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Đoán Ý Đồng Đội",
+    description: "DO: Bạn và người bên phải cùng đếm '1, 2, 3' và nói to một món ăn yêu thích nhất. Nếu trùng nhau cả 2 được miễn phạt, nếu khác nhau HOẶC DRINK: Mỗi người uống 1 ngụm!",
+    penalty: "Ý nghĩ không đồng điệu: Mỗi người uống 1 ngụm",
+    drinkCount: 1
+  },
+  {
+    id: "dod_36",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Nhại Lại Cử Chỉ",
+    description: "DO: Hãy bắt chước lại 1 thói quen hoặc điệu bộ hài hước nhất của 1 người bất kỳ trong nhóm để mọi người cùng đoán. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Không diễn được: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_37",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Ga-lăng Gắp Mồi",
+    description: "DO: Dùng đũa/thìa tự tay gắp một món ngon nhất trên bàn tiếp tế cho một bạn nữ (hoặc người bạn ít nói nhất). HOẶC DRINK: Uống 1 ly!",
+    penalty: "Không chịu tiếp tế: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "dod_38",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Tạo Dáng Siêu Mẫu",
+    description: "DO: Đứng dậy bước 3 bước catwalk và tạo dáng 'bá đạo' nhất cho cả nhóm chụp ảnh lưu niệm. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Từ chối catwalk: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_39",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Cụng Ly Chéo Tay (Giao Bôi)",
+    description: "DO: Chọn 1 người bạn thân thiết trong nhóm cùng cụng ly bắt chéo tay và uống cạn nửa ly chúc tình anh em/bằng hữu bền lâu. HOẶC DRINK: Uống 2 ly!",
+    penalty: "Không uống giao bôi: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "dod_40",
+    deck: "do-drink",
+    deckName: "Do or Drink",
+    category: "do-drink",
+    categoryName: "Do or Drink 🥃",
+    badgeColor: "from-orange-500 to-amber-600",
+    iconName: "Flame",
+    title: "Thần Giao Cách Cảm",
+    description: "DO: Nhắm mắt lại, một người trong nhóm sẽ vỗ nhẹ vào vai bạn, hãy đoán xem đó là ai (nam hay nữ). Đoán sai HOẶC DRINK: Uống 1 ly!",
+    penalty: "Đoán sai: Uống 1 ly",
+    drinkCount: 1
   },
 
   // =========================================================================
@@ -907,7 +1220,7 @@ export const DRINKING_CARDS = [
   },
 
   // =========================================================================
-  // 🤫 PHẦN 4: TRUTH OR DARE (22 LÁ THẬT HAY THÁCH ĐỜI TƯ SÂU SẮC)
+  // 🤫 PHẦN 4: TRUTH OR DARE (36 LÁ THẬT HAY THÁCH ĐỜI TƯ SÂU SẮC)
   // =========================================================================
   {
     id: "td_01",
@@ -1195,6 +1508,188 @@ export const DRINKING_CARDS = [
     penalty: "Không nói được: Tự giác uống 1 ly",
     drinkCount: 1
   },
+  {
+    id: "td_23",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-cyan-500 to-blue-600",
+    iconName: "HelpCircle",
+    title: "Truth: Mẫu Người Lý Tưởng Trong Nhóm",
+    description: "Nếu bắt buộc phải chọn 1 người trong nhóm 13 người hôm nay để tìm hiểu và hẹn hò, bạn sẽ chọn ai? (Cấm trả lời 'không ai')!",
+    penalty: "Không dám chọn: Uống 2 ly!",
+    drinkCount: 2
+  },
+  {
+    id: "td_24",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-cyan-500 to-blue-600",
+    iconName: "HelpCircle",
+    title: "Truth: Giả Say Trốn Trách Nhiệm",
+    description: "Bạn đã từng có lần nào giả vờ say để được ai đó chăm sóc chu đáo, đưa về tận nhà hoặc để trốn trả tiền chưa?",
+    penalty: "Giấu giếm sự thật: Uống 2 ly!",
+    drinkCount: 2
+  },
+  {
+    id: "td_25",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-cyan-500 to-blue-600",
+    iconName: "HelpCircle",
+    title: "Truth: Người Khó Đoán Nhất",
+    description: "Trong 13 người ngồi đây, ai là người bạn cảm thấy khó nắm bắt nội tâm nhất hoặc ít khi bộc lộ cảm xúc thật của mình?",
+    penalty: "Từ chối trả lời: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "td_26",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-cyan-500 to-blue-600",
+    iconName: "HelpCircle",
+    title: "Truth: Tật Xấu Khi Say Rượu",
+    description: "Tật xấu hài hước hoặc đáng xấu hổ nhất của bạn sau khi uống say là gì? Kể lại một 'chiến tích' có thật cho cả bàn nghe.",
+    penalty: "Không kể: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "td_27",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-cyan-500 to-blue-600",
+    iconName: "HelpCircle",
+    title: "Truth: Nụ Hôn Đầu Tiên",
+    description: "Nụ hôn đầu tiên của bạn diễn ra vào năm bao nhiêu tuổi, với ai và cảm xúc lúc đó thế nào? (Kể ngắn gọn, văn minh).",
+    penalty: "Giữ làm bí mật riêng: Uống 2 ngụm",
+    drinkCount: 2
+  },
+  {
+    id: "td_28",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-cyan-500 to-blue-600",
+    iconName: "HelpCircle",
+    title: "Truth: Mối Quan Hệ 'Mập Mờ'",
+    description: "Bạn đã từng rơi vào một mối quan hệ 'mập mờ' không tên chưa? Điều gì khiến hai người cuối cùng không thể chính thức thành đôi?",
+    penalty: "Từ chối chia sẻ: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "td_29",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-cyan-500 to-blue-600",
+    iconName: "HelpCircle",
+    title: "Truth: Tự Đánh Giá Độ Chung Tình",
+    description: "Tự chấm điểm độ chung tình của bản thân trên thang điểm 10 và đưa ra 1 dẫn chứng thực tế trong quá khứ để chứng minh.",
+    penalty: "Tự chấm dưới 5 điểm hoặc không nói: Uống 2 ly",
+    drinkCount: 2
+  },
+  {
+    id: "td_30",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-rose-500 to-pink-600",
+    iconName: "Flame",
+    title: "Dare: Nữ Quyền Tối Cao",
+    description: "4 bạn nữ trong nhóm hội ý nhanh 30 giây và đồng thanh đưa ra 1 yêu cầu nhỏ cho 1 bạn nam bất kỳ. Bạn nam đó phải thực hiện hoặc chịu phạt!",
+    penalty: "Bạn nam từ chối: Uống 2 ly đầy",
+    drinkCount: 2
+  },
+  {
+    id: "td_31",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-rose-500 to-pink-600",
+    iconName: "Flame",
+    title: "Dare: Cõng Bạn Một Vòng",
+    description: "Chọn 1 bạn nam trong nhóm cõng hoặc bế bạn đi nửa vòng quanh khu vực ngồi của nhóm để chứng tỏ sức mạnh đồng đội!",
+    penalty: "Không hoàn thành: Cả hai người cùng uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "td_32",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-rose-500 to-pink-600",
+    iconName: "Flame",
+    title: "Dare: Trợ Lý Rót Đồ Uống",
+    description: "Trong 2 lượt chơi tiếp theo, bạn phải tự nguyện nhận nhiệm vụ phục vụ đá và rót đồ uống cho người ngồi bên cạnh bất cứ khi nào ly của họ vơi.",
+    penalty: "Quên phục vụ: Bị phạt 1 ngụm/lần",
+    drinkCount: 1
+  },
+  {
+    id: "td_33",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-rose-500 to-pink-600",
+    iconName: "Flame",
+    title: "Dare: Đọc Thơ Khen Bạn Bè",
+    description: "Sáng tác và đọc ngay 4 câu thơ (hoặc 4 câu rap tự do) có vần điệu để tôn vinh và khích lệ 13 thành viên đang ngồi trong bàn.",
+    penalty: "Không làm được thơ: Uống 2 ly!",
+    drinkCount: 2
+  },
+  {
+    id: "td_34",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-rose-500 to-pink-600",
+    iconName: "Flame",
+    title: "Dare: Đấu Mắt Cười Phạt",
+    description: "Chọn 1 bạn khác giới nhìn thẳng vào mắt nhau ở cự ly gần trong 15 giây. Ai chớp mắt trước hoặc bật cười trước phải uống 1 ly!",
+    penalty: "Người thua cuộc đấu mắt: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "td_35",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-rose-500 to-pink-600",
+    iconName: "Flame",
+    title: "Dare: Kể Tên Ưu Điểm Bạn Bè",
+    description: "Chỉ tay vào 1 bạn nam và 1 bạn nữ trong nhóm, kể ngay mỗi người 2 ưu điểm nổi bật nhất mà bạn rất nể phục ở họ.",
+    penalty: "Không kể được: Uống 1 ly",
+    drinkCount: 1
+  },
+  {
+    id: "td_36",
+    deck: "truth-dare",
+    deckName: "Truth or Dare",
+    category: "truth-dare",
+    categoryName: "Truth or Dare 🤫",
+    badgeColor: "from-rose-500 to-pink-600",
+    iconName: "Flame",
+    title: "Dare: Lời Chúc Phúc 1 Vòng",
+    description: "Nâng ly và gửi một lời chúc chân thành, ấm áp nhất tới toàn thể 13 anh em/bạn bè có mặt ngày hôm nay rồi cạn ly 50%!",
+    penalty: "Từ chối nâng ly: Uống 2 ly",
+    drinkCount: 2
+  },
 
   // =========================================================================
   // 🍻 PHẦN 5: BỘ "PHÊ FAR" (20 LÁ SÁT PHẠT BÀN NHẬU CỰC CĂNG)
@@ -1285,8 +1780,8 @@ export const DRINKING_CARDS = [
     categoryName: "Phê Far 🍻",
     badgeColor: "from-amber-500 to-red-600",
     iconName: "Beer",
-    title: "Rót Rượu Phục Vụ",
-    description: "Đứng dậy và tự tay cầm chai rót đầy ly cho tất cả mọi người trong bàn kèm một lời chúc tốt lành.",
+    title: "Chủ Xị Rót Rượu",
+    description: "Đứng dậy và tự tay cầm chai rót đầy ly cho tất cả bạn bè trong nhóm kèm một lời chúc tốt lành.",
     penalty: "Rót thiếu hoặc từ chối: Tự phạt 2 ly đầy",
     drinkCount: 2
   },

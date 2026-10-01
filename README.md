@@ -1,6 +1,6 @@
 # 🍻 DrunkDeck - Drinking Game Online (Mobile-First)
 
-Ứng dụng web thẻ bài tương tác dành riêng cho các buổi tiệc tùng, tụ họp bạn bè. Tối ưu hóa hoàn toàn cho màn hình cảm ứng điện thoại thông minh với cử chỉ vuốt trượt thẻ bài (Swipe/Slide-out), âm thanh chân thực từ Web Audio API và hệ thống 120 lá bài phong phú.
+Ứng dụng web thẻ bài tương tác dành riêng cho các buổi tiệc tùng, tụ họp bạn bè. Tối ưu hóa hoàn toàn cho màn hình cảm ứng điện thoại thông minh với cử chỉ vuốt trượt thẻ bài (Swipe/Slide-out), âm thanh chân thực từ Web Audio API và hệ thống 158 lá bài phong phú, thiết kế đặc biệt tối ưu cho nhóm chơi riêng tư (ví dụ 13 người: 4 nữ, 9 nam).
 
 ---
 
@@ -15,13 +15,13 @@
   - Sử dụng **Web Audio API** tổng hợp trực tiếp từ trình duyệt, phản hồi tức thì mà không cần tải file MP3 bên ngoài, không lo giật lag khi mạng yếu.
   - Rung phản hồi (`navigator.vibrate`) khi bốc thẻ và khi trúng hình phạt nặng.
   - Pháo hoa ăn mừng (`canvas-confetti`) rực rỡ khi bốc trúng thẻ Kim Bài Đặc Quyền.
-- 📦 **Kho 120 Lá Bài Cực Chất Từ Các Bộ Game Nổi Tiếng**:
-  1. **Thổ Lộ & Tình Cảm 💌 (28 lá)**: Những câu hỏi chân thành, cảm xúc sâu lắng, rung động lãng mạn nhưng văn minh, không quá 18+.
-  2. **Do or Drink 🥃 (28 lá)**: Thách thức hành động trực diện - hoặc dũng cảm thực hiện hoặc chịu phạt nâng ly!
-  3. **Kim Bài Quyền Lực 👑 (12 lá)**: Bùa hộ mệnh, khiên phản đòn, chuyển giao hình phạt, thẩm phán tối cao, bất tử 1 vòng.
-  4. **Truth or Dare 🤫 (22 lá)**: Thật hay Thách kinh điển, khám phá đời tư và thử thách lầy lội.
-  5. **Phê Far 🍻 (20 lá)**: Sát phạt bàn nhậu đỉnh cao, giao bôi cạn ly, vòng tròn tử thần, bắn tỉa.
-  6. **U Là Trời ⚡ (10 lá)**: Mini-game đối kháng, đấu tố vui nhộn, luật nhóm oái oăm của Gen Z.
+- 📦 **Kho 158 Lá Bài Cực Chất Dành Riêng Cho Nhóm Bạn Bè**:
+  1. **Thổ Lộ & Tình Cảm 💌 (40 lá)**: Những câu hỏi chân thành, cảm xúc sâu lắng, rung động lãng mạn nhưng văn minh, gắn kết các thành viên nam và nữ, không quá 18+.
+  2. **Do or Drink 🥃 (40 lá)**: Thách thức hành động trực diện - thể lực, biểu cảm, ga-lăng, giao bôi hoặc chịu phạt nâng ly (hoàn toàn tương tác nội bộ nhóm, không cần người ngoài).
+  3. **Truth or Dare 🤫 (36 lá)**: Thật hay Thách kinh điển, khám phá đời tư, nữ quyền tối cao, thử thách lầy lội giữa 4 bạn nữ và 9 bạn nam.
+  4. **Phê Far 🍻 (20 lá)**: Sát phạt bàn nhậu đỉnh cao, giao bôi cạn ly, vòng tròn tử thần, bắn tỉa.
+  5. **Kim Bài Quyền Lực 👑 (12 lá)**: Bùa hộ mệnh, khiên phản đòn, chuyển giao hình phạt, thẩm phán tối cao, bất tử 1 vòng.
+  6. **U Là Trời ⚡ (10 lá)**: Mini-game đối kháng, đấu mắt nhịn cười, luật nhóm oái oăm của Gen Z.
 
 ---
 
