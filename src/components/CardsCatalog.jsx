@@ -22,20 +22,14 @@ import { DRINKING_CARDS } from '../data/cardsData';
 // Danh mục lọc với icon và badge
 const CATEGORY_TABS = [
   { key: 'all', name: 'Tất Cả', icon: Layers, count: 158 },
-  { key: 'tho-lo', name: 'Thổ Lộ 💌', icon: Heart, count: 40 },
-  { key: 'do-drink', name: 'Do or Drink 🥃', icon: Zap, count: 40 },
-  { key: 'truth-dare', name: 'Truth or Dare 🤫', icon: HelpCircle, count: 36 },
-  { key: 'phe-far', name: 'Phê Far 🍻', icon: Beer, count: 20 },
-  { key: 'lucky', name: 'Kim Bài 👑', icon: Crown, count: 12 },
-  { key: 'u-la-troi', name: 'U Là Trời ⚡', icon: Sparkles, count: 10 }
+  { key: 'truth', name: 'Truth / Uống 🤫', icon: HelpCircle, count: 68 },
+  { key: 'dare', name: 'Dare / Uống 🔥', icon: Flame, count: 90 }
 ];
 
 const PENALTY_FILTERS = [
   { key: 'all', label: 'Tất cả mức độ' },
-  { key: 'lucky', label: '👑 Kim bài' },
-  { key: '1', label: '🥃 1 ly/ngụm' },
-  { key: '2', label: '🥃🥃 2 ly/ngụm' },
-  { key: '3+', label: '🔥 3+ ly / Cạn ly' }
+  { key: '1', label: '🥃 1 ly (Độ khó vừa)' },
+  { key: '2', label: '🥃🥃 2 ly (Độ khó cao)' }
 ];
 
 const ICON_MAP = {
@@ -61,20 +55,18 @@ export default function CardsCatalog({ onBackToGame, onSelectCardToPlay }) {
     const query = searchQuery.trim().toLowerCase();
 
     return DRINKING_CARDS.filter(card => {
-      // 1. Lọc theo danh mục / loại thẻ
+      // 1. Lọc theo danh mục / loại thẻ (truth hoặc dare)
       if (selectedCategory !== 'all') {
         const matchesCategory = 
           card.category === selectedCategory || 
-          card.deck === selectedCategory;
+          card.type === selectedCategory;
         if (!matchesCategory) return false;
       }
 
-      // 2. Lọc theo mức độ phạt
+      // 2. Lọc theo mức độ phạt (1 ly hoặc 2 ly)
       if (selectedPenalty !== 'all') {
-        if (selectedPenalty === 'lucky' && card.category !== 'lucky') return false;
         if (selectedPenalty === '1' && card.drinkCount !== 1) return false;
         if (selectedPenalty === '2' && card.drinkCount !== 2) return false;
-        if (selectedPenalty === '3+' && card.drinkCount < 3) return false;
       }
 
       // 3. Tìm kiếm theo tên thẻ, nội dung, hình phạt
@@ -121,11 +113,11 @@ export default function CardsCatalog({ onBackToGame, onSelectCardToPlay }) {
           </button>
           <div>
             <h1 className="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-2">
-              KHO THẺ BÀI DRUNK DECK
+              KHO THẺ TRUTH OR DARE
               <Sparkles className="w-5 h-5 text-party-neonCyan" />
             </h1>
             <p className="text-xs text-gray-400">
-              Tra cứu & xem trước toàn bộ <span className="text-party-neonPink font-bold">158 thẻ bài</span> tiệc tùng
+              Tra cứu & xem trước toàn bộ <span className="text-party-neonPink font-bold">158 thẻ bài Thật hay Thách</span> (Tối đa 2 ly)
             </p>
           </div>
         </div>
@@ -304,22 +296,17 @@ export default function CardsCatalog({ onBackToGame, onSelectCardToPlay }) {
                       </p>
                     </div>
 
-                    <div className="shrink-0 text-right">
-                      {card.category === 'lucky' ? (
-                        <span className="text-[11px] font-bold text-emerald-400 px-2.5 py-1 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center gap-1">
-                          <Crown className="w-3 h-3" /> Bùa
-                        </span>
-                      ) : (
-                        <span className={`text-[11px] font-bold px-2 py-1 rounded-lg border flex items-center gap-1 ${
-                          card.drinkCount >= 3 
-                            ? 'text-red-400 bg-red-400/10 border-red-400/30' 
-                            : card.drinkCount === 2 
-                            ? 'text-amber-400 bg-amber-400/10 border-amber-400/30' 
-                            : 'text-blue-300 bg-blue-400/10 border-blue-400/20'
-                        }`}>
-                          🥃 {card.drinkCount} ly
-                        </span>
-                      )}
+                    <div className="shrink-0 text-right flex flex-col items-end gap-1">
+                      <span className={`text-[11px] font-bold px-2 py-1 rounded-lg border flex items-center gap-1 ${
+                        card.drinkCount === 2 
+                          ? 'text-red-400 bg-red-400/10 border-red-400/30' 
+                          : 'text-amber-300 bg-amber-400/10 border-amber-400/30'
+                      }`}>
+                        🥃 {card.drinkCount} ly
+                      </span>
+                      <span className="text-[10px] text-gray-400 font-medium">
+                        {card.drinkCount === 2 ? 'Độ khó: Khó' : 'Độ khó: Vừa'}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -331,7 +318,7 @@ export default function CardsCatalog({ onBackToGame, onSelectCardToPlay }) {
 
       {/* Footer nhỏ trang Catalog */}
       <div className="py-4 text-center border-t border-white/10 text-xs text-gray-500">
-        DrunkDeck Party • 158 Thẻ Bài Bản Quyền Dành Riêng Cho Nhóm Bạn Thân
+        Truth or Dare Party • 158 Thẻ Bài Thật Hay Thách Cho Nhóm Bạn
       </div>
     </div>
   );

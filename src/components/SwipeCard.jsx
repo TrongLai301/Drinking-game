@@ -77,7 +77,7 @@ export default function SwipeCard({ card, onNext, isDeckEmpty, remainingCount, t
               {/* Top Banner */}
               <div className="w-full flex justify-between items-center text-xs tracking-widest text-gray-400 font-semibold uppercase">
                 <span className="flex items-center gap-1 text-party-neonCyan">
-                  <Sparkles className="w-3.5 h-3.5" /> DRUNK DECK
+                  <Sparkles className="w-3.5 h-3.5" /> TRUTH OR DARE
                 </span>
                 <span className="px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-[11px]">
                   {remainingCount} LÁ BÀI
@@ -92,10 +92,10 @@ export default function SwipeCard({ card, onNext, isDeckEmpty, remainingCount, t
                   </div>
                 </div>
                 <h2 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-300 to-cyan-300 tracking-tight">
-                  SẴN SÀNG CHƯA?
+                  THẬT HAY THÁCH?
                 </h2>
-                <p className="text-xs text-gray-300 mt-2.5 max-w-[230px] leading-relaxed">
-                  Vuốt thẻ sang trái/phải hoặc chạm trực tiếp vào thẻ để bốc lá bài đầu tiên!
+                <p className="text-xs text-gray-300 mt-2.5 max-w-[240px] leading-relaxed">
+                  Vuốt thẻ sang trái/phải hoặc chạm trực tiếp để bốc lá Truth / Uống hoặc Dare / Uống đầu tiên!
                 </p>
               </div>
 
@@ -114,10 +114,10 @@ export default function SwipeCard({ card, onNext, isDeckEmpty, remainingCount, t
               </div>
               <h3 className="text-2xl font-black text-white">ĐÃ HẾT BỘ BÀI!</h3>
               <p className="text-xs text-gray-400 mt-2 max-w-[220px]">
-                Toàn bộ {totalCardsCount} lá bài đã được rút hết trong ván đấu hôm nay.
+                Toàn bộ {totalCardsCount} lá bài Truth or Dare đã được rút hết trong ván đấu.
               </p>
               <p className="text-xs text-party-neonCyan font-bold mt-4">
-                Bấm nút "Xáo Lại" bên dưới để chơi lại từ đầu!
+                Bấm nút "Xáo Lại" bên dưới để tiếp tục cuộc vui!
               </p>
             </div>
           ) : (
@@ -131,21 +131,19 @@ export default function SwipeCard({ card, onNext, isDeckEmpty, remainingCount, t
                     {card.categoryName}
                   </span>
 
-                  {/* Số ly uống phạt */}
-                  <div className="flex items-center gap-1 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">
-                    {card.drinkCount > 0 ? (
-                      <>
-                        {Array.from({ length: Math.min(card.drinkCount, 3) }).map((_, i) => (
-                          <Beer key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-                        ))}
-                        {card.drinkCount > 3 && (
-                          <span className="text-xs text-amber-400 font-bold">+{card.drinkCount - 3}</span>
-                        )}
-                        <span className="text-xs font-bold text-amber-300 ml-1">{card.drinkCount} ly</span>
-                      </>
-                    ) : (
-                      <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">Đặc Quyền</span>
-                    )}
+                  {/* Số ly uống phạt & Độ khó */}
+                  <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1 rounded-full">
+                    {Array.from({ length: Math.min(card.drinkCount || 1, 2) }).map((_, i) => (
+                      <Beer key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    ))}
+                    <span className="text-xs font-bold text-amber-300 ml-0.5">{card.drinkCount} ly</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ml-1 ${
+                      card.drinkCount === 2 
+                        ? 'bg-red-500/20 text-red-300 border border-red-500/30' 
+                        : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+                    }`}>
+                      {card.difficulty || (card.drinkCount === 2 ? 'Khó' : 'Vừa')}
+                    </span>
                   </div>
                 </div>
 
@@ -167,7 +165,7 @@ export default function SwipeCard({ card, onNext, isDeckEmpty, remainingCount, t
                   <ShieldAlert className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-red-400 block">
-                      Hình Phạt / Luật Áp Dụng
+                      Hình Phạt (Nếu từ chối thực hiện / trả lời)
                     </span>
                     <span className="text-xs font-medium text-red-200 leading-snug">
                       {card.penalty}

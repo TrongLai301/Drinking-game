@@ -16,13 +16,11 @@ import {
 } from 'lucide-react';
 
 const CATEGORIES = [
-  { key: 'all', name: 'Tất Cả (158)', icon: Layers },
-  { key: 'tho-lo', name: 'Thổ Lộ 💌 (40)', icon: Heart },
-  { key: 'do-drink', name: 'Do or Drink 🥃 (40)', icon: Zap },
-  { key: 'truth-dare', name: 'Truth or Dare 🤫 (36)', icon: HelpCircle },
-  { key: 'phe-far', name: 'Phê Far 🍻 (20)', icon: Beer },
-  { key: 'lucky', name: 'Kim Bài 👑 (12)', icon: Crown },
-  { key: 'u-la-troi', name: 'U Là Trời ⚡ (10)', icon: Sparkles }
+  { key: 'all', name: 'Bộ Bài Chung (158)', icon: Layers },
+  { key: 'truth', name: 'Truth / Uống 🤫 (68)', icon: HelpCircle },
+  { key: 'dare', name: 'Dare / Uống 🔥 (90)', icon: Flame },
+  { key: 'drink-1', name: '1 Ly (Vừa) 🥃', icon: Beer },
+  { key: 'drink-2', name: '2 Ly (Khó) 🥃🥃', icon: Zap }
 ];
 
 export default function Header({ 
@@ -50,9 +48,9 @@ export default function Header({
             </div>
             <div>
               <h1 className="text-lg font-black tracking-tight text-white flex items-center gap-1.5">
-                DRUNK DECK <Sparkles className="w-4 h-4 text-party-neonCyan" />
+                TRUTH OR DARE <Sparkles className="w-4 h-4 text-party-neonCyan" />
               </h1>
-              <p className="text-[11px] text-gray-400 font-medium">158 Thẻ Bài Drinking Game</p>
+              <p className="text-[11px] text-gray-400 font-medium">Thật Hay Thách • Tối Đa 2 Ly</p>
             </div>
           </div>
 

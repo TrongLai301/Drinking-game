@@ -48,9 +48,16 @@ export default function HistoryModal({ isOpen, onClose, history }) {
                   <p className="text-xs text-gray-300 mt-1 leading-relaxed">{card.description}</p>
                   <p className="text-[11px] text-red-400 mt-2 font-medium">⚠️ {card.penalty}</p>
                 </div>
-                <div className="text-right shrink-0">
-                  <span className="text-xs font-bold text-amber-400 px-2 py-1 rounded-lg bg-amber-400/10 border border-amber-400/20">
-                    {card.drinkCount > 0 ? `${card.drinkCount} ly` : 'Đặc quyền'}
+                <div className="text-right shrink-0 flex flex-col items-end gap-1">
+                  <span className={`text-xs font-bold px-2 py-1 rounded-lg border ${
+                    card.drinkCount === 2 
+                      ? 'text-red-400 bg-red-400/10 border-red-400/30' 
+                      : 'text-amber-400 bg-amber-400/10 border-amber-400/20'
+                  }`}>
+                    🥃 {card.drinkCount} ly
+                  </span>
+                  <span className="text-[10px] text-gray-400">
+                    {card.drinkCount === 2 ? 'Khó' : 'Vừa'}
                   </span>
                 </div>
               </div>

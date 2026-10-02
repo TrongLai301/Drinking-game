@@ -2,13 +2,15 @@ import { useState, useCallback, useMemo } from 'react';
 import { DRINKING_CARDS } from '../data/cardsData';
 
 export function useDrinkingGame() {
-  // Bộ bài đang hoạt động theo bộ lọc (mặc định là toàn bộ 50 lá)
+  // Bộ bài đang hoạt động theo bộ lọc (mặc định là toàn bộ 158 lá Truth & Dare)
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  // Lọc danh sách bài theo category đã chọn
+  // Lọc danh sách bài theo chế độ đã chọn
   const baseCards = useMemo(() => {
     if (selectedCategory === 'all') return DRINKING_CARDS;
-    return DRINKING_CARDS.filter(card => card.category === selectedCategory);
+    if (selectedCategory === 'drink-1') return DRINKING_CARDS.filter(c => c.drinkCount === 1);
+    if (selectedCategory === 'drink-2') return DRINKING_CARDS.filter(c => c.drinkCount === 2);
+    return DRINKING_CARDS.filter(card => card.category === selectedCategory || card.type === selectedCategory);
   }, [selectedCategory]);
 
   // Danh sách các lá bài CHƯA BỐC (Draw pool)
@@ -75,13 +77,20 @@ export function useDrinkingGame() {
   }, [baseCards]);
 
   /**
-   * Thay đổi bộ lọc danh mục bài (Tất cả, Thách thức, Thật thà, Luật nhóm, ...)
+   * Thay đổi chế độ bài (Tất cả, Truth / Uống, Dare / Uống, 1 Ly, 2 Ly)
    */
   const changeCategory = useCallback((categoryKey) => {
     setSelectedCategory(categoryKey);
-    const newBase = categoryKey === 'all' 
-      ? DRINKING_CARDS 
-      : DRINKING_CARDS.filter(c => c.category === categoryKey);
+    let newBase = DRINKING_CARDS;
+    if (categoryKey === 'all') {
+      newBase = DRINKING_CARDS;
+    } else if (categoryKey === 'drink-1') {
+      newBase = DRINKING_CARDS.filter(c => c.drinkCount === 1);
+    } else if (categoryKey === 'drink-2') {
+      newBase = DRINKING_CARDS.filter(c => c.drinkCount === 2);
+    } else {
+      newBase = DRINKING_CARDS.filter(c => c.category === categoryKey || c.type === categoryKey);
+    }
     
     setIsDrawing(false);
     setCurrentCard(null);

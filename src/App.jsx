@@ -62,15 +62,8 @@ export default function App() {
 
     celebratedCardIdRef.current = currentCard.id;
 
-    if (currentCard.category === 'lucky') {
-      const timer = setTimeout(() => {
-        playSound('lucky');
-        triggerConfetti();
-        triggerVibrate(45);
-      }, 260);
-      return () => clearTimeout(timer);
-
-    } else if (currentCard.drinkCount >= 3) {
+    // Hiệu ứng cảnh báo khi bốc trúng thẻ mức độ khó cao nhất (2 ly phạt)
+    if (currentCard.drinkCount === 2) {
       const timer = setTimeout(() => {
         playSound('heavy');
         triggerVibrate(50);

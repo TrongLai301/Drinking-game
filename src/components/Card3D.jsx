@@ -39,7 +39,7 @@ export default function Card3D({ card, isFlipped, onFlip, isDrawing, remainingCo
           {/* Phần trên mặt lưng */}
           <div className="w-full flex justify-between items-center text-xs tracking-widest text-gray-400 uppercase font-semibold">
             <span className="flex items-center gap-1 text-party-neonCyan">
-              <Sparkles className="w-3.5 h-3.5" /> DRUNK DECK
+              <Sparkles className="w-3.5 h-3.5" /> TRUTH OR DARE
             </span>
             <span className="px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-[11px]">
               {remainingCount} LÁ CÒN
@@ -80,17 +80,19 @@ export default function Card3D({ card, isFlipped, onFlip, isDrawing, remainingCo
                     {card.categoryName}
                   </span>
                   
-                  {/* Hiển thị số ly uống phạt */}
-                  <div className="flex items-center gap-1 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">
-                    {Array.from({ length: Math.min(card.drinkCount || 1, 3) }).map((_, i) => (
+                  {/* Hiển thị số ly uống phạt & Độ khó */}
+                  <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">
+                    {Array.from({ length: Math.min(card.drinkCount || 1, 2) }).map((_, i) => (
                       <Beer key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
                     ))}
-                    {card.drinkCount > 3 && (
-                      <span className="text-xs text-amber-400 font-bold">+{card.drinkCount - 3}</span>
-                    )}
-                    {card.drinkCount === 0 && (
-                      <span className="text-[10px] text-emerald-400 font-bold uppercase">Đặc quyền</span>
-                    )}
+                    <span className="text-xs font-bold text-amber-300 ml-0.5">{card.drinkCount} ly</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ml-1 ${
+                      card.drinkCount === 2 
+                        ? 'bg-red-500/20 text-red-300 border border-red-500/30' 
+                        : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+                    }`}>
+                      {card.difficulty || (card.drinkCount === 2 ? 'Khó' : 'Vừa')}
+                    </span>
                   </div>
                 </div>
 
@@ -113,7 +115,7 @@ export default function Card3D({ card, isFlipped, onFlip, isDrawing, remainingCo
                   <ShieldAlert className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-red-400 block">
-                      Hình phạt
+                      Hình Phạt (Nếu từ chối thực hiện / trả lời)
                     </span>
                     <span className="text-xs font-medium text-red-200">
                       {card.penalty}
