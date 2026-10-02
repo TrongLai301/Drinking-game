@@ -2,7 +2,7 @@ import { useState, useCallback, useMemo } from 'react';
 import { DRINKING_CARDS } from '../data/cardsData';
 
 export function useDrinkingGame() {
-  // Bộ bài đang hoạt động theo bộ lọc (mặc định là toàn bộ 158 lá Truth & Dare)
+  // Bộ bài đang hoạt động theo bộ lọc (mặc định là toàn bộ 158 lá: 110 Truth ~70%, 48 Dare ~30%)
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   // Lọc danh sách bài theo chế độ đã chọn

@@ -15,10 +15,16 @@ import {
   Zap
 } from 'lucide-react';
 
+import { DRINKING_CARDS } from '../data/cardsData';
+
+const totalCards = DRINKING_CARDS.length;
+const truthCount = DRINKING_CARDS.filter(c => c.type === 'truth').length;
+const dareCount = DRINKING_CARDS.filter(c => c.type === 'dare').length;
+
 const CATEGORIES = [
-  { key: 'all', name: 'Bộ Bài Chung (158)', icon: Layers },
-  { key: 'truth', name: 'Truth / Uống 🤫 (68)', icon: HelpCircle },
-  { key: 'dare', name: 'Dare / Uống 🔥 (90)', icon: Flame },
+  { key: 'all', name: `Bộ Bài Chung (${totalCards})`, icon: Layers },
+  { key: 'truth', name: `Truth / Uống 🤫 (${truthCount})`, icon: HelpCircle },
+  { key: 'dare', name: `Dare / Uống 🔥 (${dareCount})`, icon: Flame },
   { key: 'drink-1', name: '1 Ly (Vừa) 🥃', icon: Beer },
   { key: 'drink-2', name: '2 Ly (Khó) 🥃🥃', icon: Zap }
 ];
@@ -55,11 +61,11 @@ export default function Header({
           </div>
 
           <div className="flex items-center gap-1.5 sm:gap-2">
-            {/* Nút xem toàn bộ kho 158 thẻ bài */}
+            {/* Nút xem toàn bộ kho thẻ bài */}
             <button
               onClick={onOpenCatalog}
               className="px-2.5 py-1.5 rounded-full bg-party-card border border-party-neonPink/40 hover:border-party-neonPink text-party-neonPink text-xs font-semibold flex items-center gap-1 shadow-sm transition active:scale-95"
-              title="Xem và tra cứu toàn bộ 158 thẻ bài"
+              title={`Xem và tra cứu toàn bộ ${totalCards} thẻ bài`}
             >
               <Layers className="w-3.5 h-3.5" />
               <span>Kho Thẻ</span>

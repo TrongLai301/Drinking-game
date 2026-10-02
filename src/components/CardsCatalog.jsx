@@ -19,11 +19,15 @@ import {
 } from 'lucide-react';
 import { DRINKING_CARDS } from '../data/cardsData';
 
+const totalCount = DRINKING_CARDS.length;
+const truthCount = DRINKING_CARDS.filter(c => c.type === 'truth').length;
+const dareCount = DRINKING_CARDS.filter(c => c.type === 'dare').length;
+
 // Danh mục lọc với icon và badge
 const CATEGORY_TABS = [
-  { key: 'all', name: 'Tất Cả', icon: Layers, count: 158 },
-  { key: 'truth', name: 'Truth / Uống 🤫', icon: HelpCircle, count: 68 },
-  { key: 'dare', name: 'Dare / Uống 🔥', icon: Flame, count: 90 }
+  { key: 'all', name: 'Tất Cả', icon: Layers, count: totalCount },
+  { key: 'truth', name: 'Truth / Uống 🤫', icon: HelpCircle, count: truthCount },
+  { key: 'dare', name: 'Dare / Uống 🔥', icon: Flame, count: dareCount }
 ];
 
 const PENALTY_FILTERS = [
@@ -117,7 +121,7 @@ export default function CardsCatalog({ onBackToGame, onSelectCardToPlay }) {
               <Sparkles className="w-5 h-5 text-party-neonCyan" />
             </h1>
             <p className="text-xs text-gray-400">
-              Tra cứu & xem trước toàn bộ <span className="text-party-neonPink font-bold">158 thẻ bài Thật hay Thách</span> (Tối đa 2 ly)
+              Tra cứu & xem trước toàn bộ <span className="text-party-neonPink font-bold">{totalCount} thẻ bài Thật hay Thách</span> (Tối đa 2 ly)
             </p>
           </div>
         </div>
@@ -206,7 +210,7 @@ export default function CardsCatalog({ onBackToGame, onSelectCardToPlay }) {
 
           <div className="text-gray-400 flex items-center gap-2">
             <span>
-              Hiển thị <strong className="text-party-neonCyan">{filteredCards.length}</strong> / 158 lá
+              Hiển thị <strong className="text-party-neonCyan">{filteredCards.length}</strong> / {totalCount} lá
             </span>
             {(searchQuery || selectedCategory !== 'all' || selectedPenalty !== 'all') && (
               <button
@@ -318,7 +322,7 @@ export default function CardsCatalog({ onBackToGame, onSelectCardToPlay }) {
 
       {/* Footer nhỏ trang Catalog */}
       <div className="py-4 text-center border-t border-white/10 text-xs text-gray-500">
-        Truth or Dare Party • 158 Thẻ Bài Thật Hay Thách Cho Nhóm Bạn
+        Truth or Dare Party • {totalCount} Thẻ Bài Thật Hay Thách Cho Nhóm Bạn ({truthCount} Truth, {dareCount} Dare)
       </div>
     </div>
   );

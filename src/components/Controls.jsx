@@ -73,7 +73,7 @@ export default function Controls({
         className="text-[11px] text-gray-400 hover:text-party-neonCyan transition flex items-center justify-center gap-1.5 pt-0.5 active:scale-95"
       >
         <Layers className="w-3.5 h-3.5 text-party-neonPink" />
-        <span>Xem toàn bộ 158 thẻ bài Truth or Dare & tìm kiếm</span>
+        <span>Xem toàn bộ {totalCount || 158} thẻ bài Truth or Dare & tìm kiếm</span>
       </button>
     </div>
   );
